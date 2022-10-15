@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { AppRouter } from './AppRouter';
+
+function Car(props) {
+  return <h2>I am a { props.brand }!</h2>;
+}
+
+const myElement = <Car brand="Ford" />;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <AppRouter />
-  </React.StrictMode>
-);
+root.render(myElement);
